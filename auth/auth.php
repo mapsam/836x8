@@ -12,7 +12,7 @@ $twitter = new TwitterAPIExchange($config);
 $twitterjson = $twitter->setGetfield($getfield)
              ->buildOauth($url, $requestMethod)
              ->performRequest();
-$filename = '../app/data/tweets.json';
+$filename = '../836x8/data/tweets.json';
 $twit = json_decode($twitterjson);
 $file = fopen($filename, 'w');
 fwrite($file, json_encode($twit));

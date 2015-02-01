@@ -9,9 +9,7 @@ $url = 'https://api.twitter.com/1.1/search/tweets.json';
 $getfield = '?q=#awesome';
 $requestMethod = 'GET';
 $twitter = new TwitterAPIExchange($config);
-$twitterjson = $twitter->setGetfield($getfield)
-             ->buildOauth($url, $requestMethod)
-             ->performRequest();
+$twitterjson = $twitter->setGetfield($getfield)->buildOauth($url, $requestMethod)->performRequest();
 $filename = '../836x8/data/tweets.json';
 $twit = json_decode($twitterjson);
 $file = fopen($filename, 'w');
